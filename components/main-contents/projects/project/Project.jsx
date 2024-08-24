@@ -1,8 +1,20 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { IoEyeSharp } from "react-icons/io5";
+import { twMerge } from "tailwind-merge";
 
-const Project = ({ data }) => {
+const Project = ({ data, selectedCategory }) => {
     const { title, tags, image, link } = data
+    const [exists, setExists] = useState(selectedCategory)
+
+    useEffect(() => {
+        if (selectedCategory === 'All') {
+            setExists(true)
+        } else {
+            const exist = tags.includes(selectedCategory)
+            setExists(exist)
+        }
+    }, [selectedCategory])
 
     // const [isInView, setIsInView] = useState(false);
     // const divRef = useRef(null);
@@ -33,7 +45,7 @@ const Project = ({ data }) => {
     //     };
     // }, []);
     return (
-        <div className="w-full group/project cursor-pointer project-animation">
+        <div className={twMerge('w-full group/project cursor-pointer project-animation', !exists && 'project-animation-hidden')}>
             <div className="w-full h-48 overflow-hidden rounded-2xl relative">
                 <Image className="w-full h-full group-hover/project:scale-110 object-cover duration-300" src={image} width={300} height={300} sizes="300px" alt="Profile" />
                 <div className="w-full h-full absolute left-0 top-0 flex justify-center items-center opacity-0 group-hover/project:opacity-100 duration-300 bg-[#ffffff4d] dark:bg-[#00000071]">

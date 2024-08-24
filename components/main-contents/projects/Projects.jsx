@@ -10,80 +10,89 @@ const categories = [
 
 const dummyProjects = [
   {
-    title: 'Meta Blog NEXT',
+    id: 1,
+    title: 'Meta Blog NEXT 1',
     tags: ['Web development', 'Application'],
     link: 'www.google.com',
     image: projectImage
   },
   {
-    title: 'Meta Blog NEXT',
+    id: 2,
+    title: 'Meta Blog NEXT 2',
     tags: ['Application', 'Web design'],
     link: 'www.google.com',
     image: projectImage
   },
   {
-    title: 'Meta Blog NEXT',
+    id: 3,
+    title: 'Meta Blog NEXT 3',
     tags: ['Web development', 'Web design'],
     link: 'www.google.com',
     image: projectImage
   },
   {
-    title: 'Meta Blog NEXT',
+    id: 4,
+    title: 'Meta Blog NEXT 4',
     tags: ['Web development', 'Web design'],
     link: 'www.google.com',
     image: projectImage
   },
   {
-    title: 'Meta Blog NEXT',
+    id: 5,
+    title: 'Meta Blog NEXT 5',
     tags: ['Application', 'Web design'],
     link: 'www.google.com',
     image: projectImage
   },
   {
-    title: 'Meta Blog NEXT',
+    id: 6,
+    title: 'Meta Blog NEXT 6',
     tags: ['Web development', 'Application'],
     link: 'www.google.com',
     image: projectImage
   },
   {
-    title: 'Meta Blog NEXT',
+    id: 7,
+    title: 'Meta Blog NEXT 7',
     tags: ['Web design'],
     link: 'www.google.com',
     image: projectImage
   },
   {
-    title: 'Meta Blog NEXT',
+    id: 8,
+    title: 'Meta Blog NEXT 8',
     tags: ['Web development'],
     link: 'www.google.com',
     image: projectImage
   },
-]
+];
+
 
 const Projects = ({ selected }) => {
   const [selectedCategory, setSelectedCategory] = useState('All')
-  const [selectedProjects, setSelectedProjects] = useState(dummyProjects)
+  // const [selectedProjects, setSelectedProjects] = useState(dummyProjects)
 
-  const have = (e) => {
-    for (let i = 0; i < e.length; i++) {
-      if (e[i] === selectedCategory) {
-        return true;
-      }
-    }
-    return false;
-  }
+  // const have = (e) => {
+  //   for (let i = 0; i < e.length; i++) {
+  //     if (e[i] === selectedCategory) {
+  //       return true;
+  //     }
+  //   }
+  //   return false;
+  // }
 
-  useEffect(() => {
-    if (selectedCategory === 'All') {
-      setSelectedProjects(dummyProjects)
-    } else {
-      const selected = dummyProjects.filter(project => have(project.tags))
-      setSelectedProjects(selected)
-    }
-  }, [selectedCategory])
+  // useEffect(() => {
+  //   if (selectedCategory === 'All') {
+  //     setSelectedProjects(dummyProjects)
+  //   } else {
+  //     const selected = dummyProjects.filter(project => have(project.tags))
+  //     setSelectedProjects(selected)
+  //   }
+  // }, [selectedCategory])
 
-  useEffect(() => {
-    setSelectedCategory('All')
-  }, [selected])
+  // useEffect(() => {
+  //   setSelectedCategory('All')
+  // }, [selected])
   return (
     <div className={`duration-300 hidden gap-7 ${selected === 'Projects' && 'nav-active'}`}>
       <Title text="Projects" />
@@ -95,7 +104,7 @@ const Projects = ({ selected }) => {
       <CategorySelect selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} categories={categories} />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {
-          selectedProjects.map((project, index) => <Project data={project} key={index} />)
+          dummyProjects.map((project, index) => <Project data={project} selectedCategory={selectedCategory} key={index} />)
         }
       </div>
     </div>
