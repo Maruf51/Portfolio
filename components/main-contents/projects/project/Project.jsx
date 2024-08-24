@@ -3,6 +3,35 @@ import { IoEyeSharp } from "react-icons/io5";
 
 const Project = ({ data }) => {
     const { title, tags, image, link } = data
+
+    // const [isInView, setIsInView] = useState(false);
+    // const divRef = useRef(null);
+
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver(
+    //         ([entry]) => {
+    //             if (entry.isIntersecting) {
+    //                 setIsInView(true);
+    //                 // Optionally unobserve the element
+    //                 observer.unobserve(divRef.current);
+    //             }
+    //         },
+    //         {
+    //             threshold: 0.1, // Adjust this as needed
+    //         }
+    //     );
+
+    //     if (divRef.current) {
+    //         observer.observe(divRef.current);
+    //     }
+
+    //     // Cleanup observer on component unmount
+    //     return () => {
+    //         if (divRef.current) {
+    //             observer.unobserve(divRef.current);
+    //         }
+    //     };
+    // }, []);
     return (
         <div className="w-full group/project cursor-pointer project-animation">
             <div className="w-full h-48 overflow-hidden rounded-2xl relative">

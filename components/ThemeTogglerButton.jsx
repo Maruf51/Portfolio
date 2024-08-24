@@ -28,7 +28,7 @@ export default function ThemeTogglerButton() {
     return (
         <span onClick={() => {
             toggleTheme(theme === 'dark' ? false : true)
-        }} className="secondary-bg rounded-lg w-10 h-10 sm:h-9 flex justify-center items-center cursor-pointer">
+        }} className="secondary-bg rounded-lg w-10 h-10 xl:h-9 flex justify-center items-center cursor-pointer">
             <FaMoon className={`w-4 h-4 secondary-text absolute ${theme === 'dark' ? 'opacity-100' : 'opacity-0'}`} />
             <FaSun className={`w-4 h-4 secondary-text absolute ${theme === 'dark' ? 'opacity-0' : 'opacity-100'}`} />
         </span>

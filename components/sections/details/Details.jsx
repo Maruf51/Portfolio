@@ -6,13 +6,14 @@ import { IoCalendar, IoMailOutline } from "react-icons/io5";
 import { FaAngleDown, FaFacebook, FaInstagram, FaLinkedinIn, FaLocationDot, FaPhoneVolume, FaTwitter } from "react-icons/fa6";
 import { useState } from "react";
 import ThemeTogglerButton from "@/components/ThemeTogglerButton";
+import { twMerge } from "tailwind-merge";
 
 const Details = ({ }) => {
     const [detailsOpen, setDetailsOpen] = useState(false)
     return (
         <div className="w-full xl:w-80 h-[fit-content] primary-bg rounded-3xl p-5 xl:p-7 xl:pb-5 border primary-border relative xl:sticky xl:top-10 shrink-0">
             <div onClick={() => setDetailsOpen(prevState => !prevState)} className={`absolute top-[-0.5px] sm:top-[-1px] right-[0] rounded-se-3xl rounded-bl-3xl w-12 sm:w-32 h-10 text-sm cursor-pointer xl:hidden ${detailsOpen ? 'border-design-highlight' : 'border-design'}`}>
-                <button className="z-[1] highlight-text">
+                <button className={twMerge('z-[1] highlight-text', detailsOpen && 'rotate-180 sm:rotate-0')}>
                     <span className="sm:hidden"><FaAngleDown /></span>
                     <span className="hidden sm:block">Show Contacts</span>
                 </button>

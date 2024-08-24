@@ -118,7 +118,7 @@ textarea::placeholder {
 }
 
 .border-design-highlight {
-  @apply flex justify-center items-center bg-gradient-to-br from-[20%] via-[50%] to-[30%] from-[#ffdb70] dark:from-[#ffdb70] via-[#1d1d1e] to-[#1d1d1e] dark:via-[#1d1d1e] dark:to-[#1d1d1e] before:absolute before:inset-[1px] before:bg-[#202022] dark:before:bg-[#202022] before:rounded-[inherit] before:z-[1]
+  @apply flex justify-center items-center bg-gradient-to-br from-[20%] via-[50%] to-[30%] from-[tomato] dark:from-[#ffdb70] via-white to-white dark:via-[#1d1d1e] dark:to-[#1d1d1e] before:absolute before:inset-[1px] before:bg-white dark:before:bg-[#202022] before:rounded-[inherit] before:z-[1] duration-300 before:duration-300
 }
 
 .nav-active {
