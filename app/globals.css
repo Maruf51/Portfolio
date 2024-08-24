@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+
+  @apply w-full h-full bg-white dark:bg-black duration-300
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.primary-bg {
+  @apply bg-primary-bg-light dark:bg-primary-bg-dark duration-300
+}
+
+.secondary-bg {
+  @apply bg-secondary-bg-light dark:bg-secondary-bg-dark duration-300
+}
+
+.hover-secondary-bg {
+  @apply hover:bg-secondary-bg-light dark:hover:bg-secondary-bg-dark duration-300
+}
+
+.primary-text {
+  @apply text-primary-color-light dark:text-primary-color-dark duration-300
+}
+
+.hover-primary-text {
+  @apply hover:text-primary-color-light dark:hover:text-primary-color-dark duration-300
+}
+
+.secondary-text {
+  @apply text-secondary-color-light dark:text-secondary-color-dark duration-300
+}
+
+input::placeholder,
+textarea::placeholder {
+  @apply text-secondary-color-light dark:text-secondary-color-dark duration-300
+}
+
+.invalid-placeholder::placeholder {
+  @apply text-red-500 dark:text-red-500
+}
+
+.hover-secondary-text {
+  @apply hover:text-secondary-color-light dark:hover:text-secondary-color-dark duration-300
+}
+
+.primary-border {
+  @apply border-border-color-light dark:border-border-color-dark duration-300
+}
+
+.primary-border-bg {
+  @apply bg-border-color-light dark:bg-border-color-dark duration-300
+}
+
+.highlight-text {
+  @apply text-highlight-light dark:text-highlight-dark duration-300
+}
+
+.hover-highlight-text {
+  @apply hover:text-highlight-light dark:hover:text-highlight-dark duration-300
+}
+
+.highlight-bg {
+  @apply bg-highlight-light dark:bg-highlight-dark duration-300
+}
+
+.highlight-border {
+  @apply border-highlight-light dark:border-highlight-dark duration-300
+}
+
+.hover-highlight-text {
+  @apply hover:text-highlight-light dark:hover:text-highlight-dark duration-300
+}
+
+.linear-bg {
+  @apply duration-300 bg-gradient-to-tl from-[#202022] to-[#232324] dark:from-[#202022] dark:to-[#232324]
+}
+
+.linear-highlight-bg {
+  @apply bg-gradient-to-r from-[tomato] to-[#ff6549] dark:from-[#ffdb70] dark:to-[#ffbc5c] duration-300
+}
+
+/* linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 25%) 0%, 
+    hsla(0, 0%, 25%, 0) 50%
+  ) */
+.border-design {
+  @apply flex justify-center items-center bg-gradient-to-br from-[20%] via-[50%] to-[30%] from-[#cbcbcd] dark:from-[#3a3a3a] via-white to-white dark:via-[#1d1d1e] dark:to-[#1d1d1e] before:absolute before:inset-[1px] before:bg-white dark:before:bg-[#212123] before:rounded-[inherit] before:z-[1] duration-300 before:duration-300
+}
+
+.secondary-border-design {
+  @apply flex justify-center items-center bg-gradient-to-br from-[20%] via-[50%] to-[30%] from-[#ff8d792b] dark:from-[#3a3a3a] via-[#dfdfdf] to-[#dfdfdf] dark:via-[#212123] dark:to-[#212123] before:absolute before:inset-[1px] before:bg-white dark:before:bg-[#212123] before:rounded-[inherit] before:z-[1] duration-300 before:duration-300
+}
+
+.border-design-highlight {
+  @apply flex justify-center items-center bg-gradient-to-br from-[20%] via-[50%] to-[30%] from-[#ffdb70] dark:from-[#ffdb70] via-[#1d1d1e] to-[#1d1d1e] dark:via-[#1d1d1e] dark:to-[#1d1d1e] before:absolute before:inset-[1px] before:bg-[#202022] dark:before:bg-[#202022] before:rounded-[inherit] before:z-[1]
+}
+
+.nav-active {
+  display: flex;
+  flex-direction: column;
+  animation: fade-in-nav 0.5s ease backwards;
+}
+
+@keyframes fade-in-nav {
+  0% {
+    opacity: 0;
+    padding-top: 50px;
+  }
+
+  100% {
+    opacity: 1;
+    padding-top: 0;
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.3s ease backwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    max-height: 0;
+  }
+
+  100% {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+
+.project-animation {
+  animation: project-animation 0.5s ease;
+}
+
+@keyframes project-animation {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
