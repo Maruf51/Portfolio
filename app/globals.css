@@ -156,7 +156,7 @@ textarea::placeholder {
 }
 
 .project-animation {
-  animation: project-animation 0.5s ease;
+  animation: project-animation 0.5s ease forwards;
 }
 
 @keyframes project-animation {
@@ -178,11 +178,8 @@ textarea::placeholder {
     transform: scale(1);
   }
 
-  99% {
-    transform: scale(0);
-  }
-
   100% {
+    transform: scale(0);
     display: none;
   }
 }
