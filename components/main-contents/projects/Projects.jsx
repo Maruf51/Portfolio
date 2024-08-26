@@ -70,29 +70,7 @@ const dummyProjects = [
 
 const Projects = ({ selected }) => {
   const [selectedCategory, setSelectedCategory] = useState('All')
-  // const [selectedProjects, setSelectedProjects] = useState(dummyProjects)
 
-  // const have = (e) => {
-  //   for (let i = 0; i < e.length; i++) {
-  //     if (e[i] === selectedCategory) {
-  //       return true;
-  //     }
-  //   }
-  //   return false;
-  // }
-
-  // useEffect(() => {
-  //   if (selectedCategory === 'All') {
-  //     setSelectedProjects(dummyProjects)
-  //   } else {
-  //     const selected = dummyProjects.filter(project => have(project.tags))
-  //     setSelectedProjects(selected)
-  //   }
-  // }, [selectedCategory])
-
-  // useEffect(() => {
-  //   setSelectedCategory('All')
-  // }, [selected])
   return (
     <div className={`duration-300 hidden gap-7 ${selected === 'Projects' && 'nav-active'}`}>
       <Title text="Projects" />

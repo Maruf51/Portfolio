@@ -31,6 +31,10 @@ body {
   }
 }
 
+a {
+  @apply text-blue hover:underline cursor-pointer
+}
+
 .primary-bg {
   @apply bg-primary-bg-light dark:bg-primary-bg-dark duration-300
 }
@@ -181,5 +185,33 @@ textarea::placeholder {
   100% {
     transform: scale(0);
     display: none;
+  }
+}
+
+.opacity-animation {
+  animation: opacity-animation 0.3s ease-in-out forwards;
+}
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.reverse-opacity-animation {
+  animation: reverse-opacity-animation 0.3s ease-in-out forwards;
+}
+
+@keyframes reverse-opacity-animation {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }

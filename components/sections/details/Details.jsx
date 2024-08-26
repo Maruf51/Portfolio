@@ -36,7 +36,7 @@ const Details = ({ }) => {
                         </div>
                         <div className="text-sm primary-text overflow-hidden">
                             <h3 className="secondary-text">EMAIL</h3>
-                            <a href="mailto:marufhossain.main@gmail.com" className=" line-clamp-1">marufhossain.main@gmail.com</a>
+                            <a href="mailto:marufhossain.main@gmail.com" className=" line-clamp-1 primary-text hover:no-underline">marufhossain.main@gmail.com</a>
                         </div>
                     </div>
                     <div className="gap-3 flex items-center">
@@ -45,7 +45,7 @@ const Details = ({ }) => {
                         </div>
                         <div className="text-sm primary-text overflow-hidden">
                             <h3 className="secondary-text">PHONE</h3>
-                            <a href="tel:01993980666" className=" line-clamp-1">+88 01993-980666</a>
+                            <a href="tel:01993980666" className=" line-clamp-1 primary-text hover:no-underline">+88 01993-980666</a>
                         </div>
                     </div>
                     <div className="gap-3 flex items-center">

@@ -37,7 +37,7 @@ const Contact = ({ selected }) => {
             <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} className={twMerge('bg-white dark:bg-primary-bg-dark w-full h-full px-3 text-sm primary-text border-none primary-border rounded-md z-[1] peer outline-none', emptyField && !name && 'invalid-placeholder')} />
             <div className={twMerge('duration-300 w-0 h-[300%] absolute highlight-bg peer-focus:w-full pointer-events-none rotate-12', name && 'w-full')}></div>
           </div>
-          <label htmlFor="name" className={twMerge("cursor-text pointer-events-none absolute left-2.5 px-1 top-[11px] z-[2] text-sm bg-transparent secondary-text", emptyField && !name && ' text-red-500 dark:text-red-500', name && 'top-[-10px] primary-bg')}>Full name*</label>
+          <label htmlFor="name" className={twMerge("cursor-text pointer-events-none absolute left-2.5 px-1 top-[11px] z-[2] text-sm bg-transparent secondary-text rounded-md", emptyField && !name && ' !text-red-500 dark:text-red-500', name && 'top-[-10px] primary-bg')}>Full name*</label>
         </div>
 
         <div className="col-span-2 md:col-span-1 w-full h-10 relative">
@@ -45,7 +45,7 @@ const Contact = ({ selected }) => {
             <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} className={twMerge('bg-white dark:bg-primary-bg-dark w-full h-full px-3 text-sm primary-text border-none primary-border rounded-md z-[1] peer outline-none', emptyField && !email && 'invalid-placeholder')} />
             <div className={twMerge('duration-300 w-0 h-[300%] absolute highlight-bg peer-focus:w-full pointer-events-none rotate-12', email && 'w-full')}></div>
           </div>
-          <label htmlFor="email" className={twMerge("cursor-text pointer-events-none absolute left-2.5 px-1 top-[11px] z-[2] text-sm bg-transparent secondary-text", emptyField && !email && ' text-red-500 dark:text-red-500', email && 'top-[-10px] primary-bg')}>Email address*</label>
+          <label htmlFor="email" className={twMerge("cursor-text pointer-events-none absolute left-2.5 px-1 top-[11px] z-[2] text-sm bg-transparent secondary-text rounded-md", emptyField && !email && ' !text-red-500 dark:text-red-500', email && 'top-[-10px] primary-bg')}>Email address*</label>
         </div>
 
         <div className="col-span-2 w-full h-20 relative">
@@ -53,7 +53,7 @@ const Contact = ({ selected }) => {
             <textarea id="message" type="email" value={message} onChange={(e) => setMessage(e.target.value)} className={twMerge('bg-white dark:bg-primary-bg-dark w-full h-full px-3 py-2 text-sm primary-text border-none primary-border rounded-md z-[1] peer outline-none resize-none', emptyField && !email && 'invalid-placeholder')} />
             <div className={twMerge('duration-300 w-0 h-[300%] absolute highlight-bg peer-focus:w-[110%] pointer-events-none rotate-12', message && 'w-[110%]')}></div>
           </div>
-          <label htmlFor="message" className={twMerge("cursor-text pointer-events-none absolute left-2.5 px-1 top-[11px] z-[2] text-sm bg-transparent secondary-text", emptyField && !message && ' text-red-500 dark:text-red-500', message && 'top-[-10px] primary-bg')}>Your Message*</label>
+          <label htmlFor="message" className={twMerge("cursor-text pointer-events-none absolute left-2.5 px-1 top-[11px] z-[2] text-sm bg-transparent secondary-text rounded-md", emptyField && !message && ' !text-red-500 dark:text-red-500', message && 'top-[-10px] primary-bg')}>Your Message*</label>
         </div>
 
         {/* <div className={twMerge('col-span-2 rounded-md w-full h-20 p-[1px] flex justify-center items-center overflow-hidden relative duration-300', emptyField ? (message ? 'primary-border-bg' : 'bg-red-500') : 'primary-border-bg')}>
