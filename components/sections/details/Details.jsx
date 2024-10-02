@@ -3,7 +3,7 @@
 import Image from "next/image"
 import photo from '@/images/maruf.jpg'
 import { IoCalendar, IoMailOutline } from "react-icons/io5";
-import { FaAngleDown, FaFacebook, FaInstagram, FaLinkedinIn, FaLocationDot, FaPhoneVolume, FaTwitter } from "react-icons/fa6";
+import { FaAngleDown, FaFacebook, FaGithub, FaInstagram, FaLinkedinIn, FaLocationDot, FaPhoneVolume, FaTwitter } from "react-icons/fa6";
 import { useState } from "react";
 import ThemeTogglerButton from "@/components/ThemeTogglerButton";
 import { twMerge } from "tailwind-merge";
@@ -50,11 +50,11 @@ const Details = ({ }) => {
                     </div>
                     <div className="gap-3 flex items-center">
                         <div className="w-14 xl:w-12 h-14 xl:h-12 rounded-2xl relative border-design shrink-0">
-                            <IoCalendar className="z-[1] w-5 h-5 highlight-text" />
+                            <FaGithub className="z-[1] w-5 h-5 highlight-text" />
                         </div>
                         <div className="text-sm primary-text overflow-hidden">
-                            <h3 className="secondary-text">BIRTHDAY</h3>
-                            <p>June 29, 2002</p>
+                            <h3 className="secondary-text">GITHUB</h3>
+                            <a href="https://github.com/Maruf51/" target="_blank" className=" line-clamp-1 primary-text hover:no-underline">https://github.com/Maruf51/</a>
                         </div>
                     </div>
                     <div className="gap-3 flex items-center">
@@ -74,8 +74,8 @@ const Details = ({ }) => {
                     <a href="#" className=" secondary-text hover-highlight-text cursor-pointer">
                         <FaTwitter className="w-5 h-5" />
                     </a>
-                    <a href="#" className=" secondary-text hover-highlight-text cursor-pointer">
-                        <FaInstagram className="w-5 h-5" />
+                    <a href="https://github.com/Maruf51/" target="_blank" className=" secondary-text hover-highlight-text cursor-pointer">
+                        <FaGithub className="w-5 h-5" />
                     </a>
                     <a href="#" className=" secondary-text hover-highlight-text cursor-pointer">
                         <FaLinkedinIn className="w-5 h-5" />

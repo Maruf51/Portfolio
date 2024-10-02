@@ -5,7 +5,7 @@ import Project from "./project/Project"
 import { projectData } from "@/assets/data"
 
 const categories = [
-  'All', 'Web design', 'Application', 'Web development'
+  'All', 'Next.js', 'Typescript', 'Tailwind', 'Socket.io', 'Zustand'
 ]
 
 const Projects = ({ selected }) => {
@@ -14,7 +14,7 @@ const Projects = ({ selected }) => {
   return (
     <div className={`duration-300 hidden gap-7 ${selected === 'Projects' && 'nav-active'}`}>
       <Title text="Projects" />
-      <div className="gap-3 cursor-pointer hidden sm:flex">
+      <div className="gap-3 cursor-pointer hidden sm:flex select-none">
         {
           categories.map((category, index) => <span onClick={() => setSelectedCategory(category)} className={`primary-text ${selectedCategory === category ? 'highlight-text hover-highlight-text' : 'hover-secondary-text'}`} key={index}>{category}</span>)
         }

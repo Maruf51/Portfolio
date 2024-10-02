@@ -13,7 +13,7 @@ const dummySkills = [
     },
     {
         title: 'Javascript',
-        rate: 85
+        rate: 75
     },
     {
         title: 'React.js',
@@ -25,7 +25,7 @@ const dummySkills = [
     },
     {
         title: 'Node.js',
-        rate: 70
+        rate: 60
     }
 ]
 
