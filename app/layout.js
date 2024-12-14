@@ -20,9 +20,7 @@ export default function RootLayout({ children }) {
           attribute="class"
           defaultTheme="dark"
         >
-          <div className="fixed w-full h-full bg-white dark:bg-black duration-300 overflow-auto">
-            {children}
-          </div>
+          {children}
         </ThemeProvider>
       </body>
     </html>
