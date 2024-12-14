@@ -18,7 +18,7 @@ export default function Home() {
   }, [selectedNav])
 
   return (
-    <main className="w-full p-5 sm:p-10 mx-auto max-w-[1250px] flex flex-col xl:flex-row gap-5 mb-16 lg:mb-0">
+    <main className="w-full p-5 sm:p-10 mx-auto max-w-[1250px] flex flex-col xl:flex-row gap-5 mb-16 lg:mb-0 relative">
       <div ref={scrollRef} className="absolute top-0"></div>
       <Details />
       <MainContents selectedNav={selectedNav} setSelectedNav={setSelectedNav} />
