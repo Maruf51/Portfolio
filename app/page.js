@@ -2,20 +2,21 @@
 
 import MainContents from "@/components/main-contents/MainContents";
 import Details from "@/components/sections/details/Details";
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 
 export default function Home() {
   const [selectedNav, setSelectedNav] = useState('About')
-    const scrollRef = useRef(null);
+  const scrollRef = useRef(null);
 
-    // Function to scroll to the referenced element
-    // const scrollToTop = () => {
-    //     scrollRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // };
+  // Function to scroll to the referenced element
+  const scrollToTop = () => {
+    if (scrollRef.current) scrollRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
-    // useEffect(() => {
-    //     scrollToTop()
-    // }, [selectedNav])
+  useMemo(() => {
+    scrollToTop()
+  }, [selectedNav])
+
   return (
     <main className="w-full p-5 sm:p-10 mx-auto max-w-[1250px] flex flex-col xl:flex-row gap-5 mb-16 lg:mb-0">
       <div ref={scrollRef} className="absolute top-0"></div>
