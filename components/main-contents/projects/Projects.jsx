@@ -5,7 +5,7 @@ import Project from "./project/Project"
 import { projectData } from "@/assets/data"
 
 const categories = [
-  'All', 'Next.js', 'Typescript', 'Tailwind', 'Socket.io', 'Zustand'
+  'All', 'Next.js', 'Typescript', 'Tailwind', 'Socket.io', 'Zustand', 'Drag/Drop'
 ]
 
 const Projects = ({ selected }) => {
