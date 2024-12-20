@@ -103,9 +103,9 @@ const ActiveProject = ({ projectActive, setProjectActive, data }) => {
             }}>
 
             </div>
-            <div className={twMerge('absolute z-10 primary-bg w-[90%] md:w-[80%] max-h-[80%] h-auto max-w-[1000px] primary-text rounded-xl p-5 xl:p-8 grid grid-cols-1 xl:grid-cols-2 overflow-auto gap-3 xl:gap-8 project-animation', projectCloseAnimation && 'project-animation-hidden')}>
-                <div className='md:grid gap-3 grid-cols-5 xl:grid-cols-1'>
-                    <Image className="w-full h-[230px] sm:h-[300px] xl:h-auto xl:aspect-[1/.6] rounded-lg object-cover object-top duration-300 mb-2 md:col-span-3 hover:cursor-zoom-in" onClick={() => setImageView(selectedImage)} src={selectedImage} width={300} height={300} sizes="300px 500px 700px" alt="Profile" />
+            <div className={twMerge('absolute z-10 primary-bg w-[90%] md:w-[80%] max-h-[80%] h-auto max-w-[1000px] primary-text rounded-xl p-5 xl:p-8 grid grid-cols-1 xl:grid-cols-2 overflow-auto gap-3 xl:gap-8 project-animation xl:overflow-hidden', projectCloseAnimation && 'project-animation-hidden')}>
+                <div className='md:grid gap-3 grid-cols-5 xl:grid-cols-1 xl:block xl:overflow-auto'>
+                    <Image className="w-full h-[230px] sm:h-[300px] xl:h-auto xl:aspect-[1/.6] rounded-lg object-cover object-top duration-300 mb-2 md:col-span-3 hover:cursor-zoom-in xl:mb-[25px]" onClick={() => setImageView(selectedImage)} src={selectedImage} width={300} height={300} sizes="300px 500px 700px" alt="Profile" />
                     <div className='flex gap-1.5 overflow-auto md:col-span-2 md:grid grid-cols-2 md:gap-2.5 md:max-h-[300px] xl:flex grid-rows-[min-content] '>
                         {
                             images.map((image, index) =>
@@ -116,13 +116,13 @@ const ActiveProject = ({ projectActive, setProjectActive, data }) => {
                                     src={image}
                                     width={100}
                                     height={75}
-                                    sizes="100px"
+                                    sizes="100px, 200px, 300px"
                                     alt="Profile"
                                 />)
                         }
                     </div>
                 </div>
-                <div className=''>
+                <div className='xl:overflow-auto xl:max-h-[500px]'>
                     <h1 className='text-2xl font-medium mb-2.5 flex items-center gap-3'>
                         {title}
                         {/* <a target='_blank' href={links[1]}>

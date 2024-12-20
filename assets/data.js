@@ -40,21 +40,43 @@ import link9 from '@/images/link-sharing/m_ls_profile.png'
 import link10 from '@/images/link-sharing/m_ls_saved.png'
 import link11 from '@/images/link-sharing/m_ls_preview.png'
 import link12 from '@/images/link-sharing/m_ls_shared.png'
+import tm1 from '@/images/true-message/tm_dashboard.png'
+import tm2 from '@/images/true-message/tm_dashboard_light.png'
+import tm3 from '@/images/true-message/tm_message_dark.png'
+import tm4 from '@/images/true-message/tm_message_light.png'
+import tm5 from '@/images/true-message/tm_signin.png'
+import tm6 from '@/images/true-message/tm_register.png'
+import tm7 from '@/images/true-message/tm_message_image.png'
+import tm8 from '@/images/true-message/m_tm_dashboard.png'
+import tm9 from '@/images/true-message/m_tm_message.png'
+import ubuntu9 from '@/images/ubuntu/ubuntu_dark.png'
+import ubuntu2 from '@/images/ubuntu/ubuntu_light.png'
+import ubuntu3 from '@/images/ubuntu/ubuntu.png'
+import ubuntu4 from '@/images/ubuntu/ubuntu_desktop.png'
+import ubuntu5 from '@/images/ubuntu/ubuntu_files.png'
+import ubuntu6 from '@/images/ubuntu/ubuntu_firefox.png'
+import ubuntu7 from '@/images/ubuntu/ubuntu_settings.png'
+import ubuntu8 from '@/images/ubuntu/ubuntu_trash.png'
+import ubuntu1 from '@/images/ubuntu/ubuntu_start.png'
 
 const projectData = [
     {
-        id: 1,
-        title: 'Chat App',
-        tags: ['Next.js', 'Tailwind', 'Socket.io', 'Zustand'],
-        languages: ['Next.js', 'Tailwind Css', 'Socket.io', 'Zustand'],
-        links: ['https://chat-app-liart-eta.vercel.app/', 'https://github.com/Maruf51/chat-app'],
-        images: [chat1, chat2, chat3, chat4],
+        id: 8,
+        title: 'Ubuntu Desktop',
+        tags: ['Next.js', 'Tailwind', 'Typescript', 'Zustand', 'Drag/Drop'],
+        languages: ['Next.js', 'Tailwind Css', 'Typescript'],
+        links: ['https://ubuntu-desktop-blue.vercel.app/', 'https://github.com/Maruf51/ubuntu-desktop'],
+        images: [ubuntu1, ubuntu2, ubuntu3, ubuntu4, ubuntu5, ubuntu6, ubuntu7, ubuntu8, ubuntu9],
         description: [
-            'Chat with ease on Chat App, where every conversation is seamless and secure.',
-            'Join Chat App for instant messaging and vibrant discussions!',
-            'Experience real-time chatting with Chat App fast, fun, and user-friendly.',
-            'Connect and communicate effortlessly on Chat App, your go-to chat hub.',
-            'Meet new people and share ideas on Chat App, where chatting is made simple.',
+            "Ubuntu Desktop, a fully interactive web-based desktop environment that mimics the look and feel of the popular Ubuntu operating system.",
+            "After logging in with a pre-set password, users are greeted with a familiar Ubuntu desktop interface, featuring a navigation bar, sidebar, and a start menu for easy access to apps and settings.",
+            "The sidebar includes essential icons like Firefox, Files, Software Update, Settings, and Portfolio, allowing users to seamlessly switch between applications.",
+            "In the Firefox app, users can browse the web by entering web addresses directly. The Files app lets users manage their file system, offering folder creation, renaming, deletion, and access to the Trash folder for recovery or deletion of files.",
+            "The Settings app enables users to customize their desktop experience, from changing the theme to setting a personalized wallpaper.",
+            "The intuitive Start Menu and Power Menu provide quick access to various applications, with a focus on usability and navigation.",
+            "At the center of the navigation bar, the Date and Time display allows users to check and interact with their notifications by simply clicking it.",
+            "User interactions are smooth and responsive, including the ability to resize, move, minimize, maximize, or close windows. Right-click context menus are available everywhere to enhance usability and user control.",
+            "Ubuntu Desktop offers a fully functional and interactive desktop experience within a web browser, combining the best of Ubuntu's design with modern web technology."
         ]
     },
     {
@@ -65,11 +87,45 @@ const projectData = [
         links: ['https://meta-blog-seven.vercel.app/', 'https://github.com/Maruf51/chat-app'],
         images: [metablog1, metablog2, metablog5, metablog6, metablog3, metablog4, metablog7, metablog8],
         description: [
-            'User can view blogs published by different authors.',
-            'The blogs are uploaded or updated or deleted from a dashboard designed with shadcn/ui, Typescript and Next.js.',
-            "All the api's are called from Next.js server.",
-            'The website has dual theme mode(Light & Dark).',
-            'The design is provided by my brother.'
+            "Meta Blog, a user-friendly and dynamic blog publishing platform designed for seamless blog discovery and management.",
+            "The landing page features the latest blogs, giving users an immediate view of the most recent content. The blogs page allows easy access to all available blogs, while the search section provides a quick way to find specific blogs based on keywords.",
+            "Each blog is displayed with its unique content and can be accessed through a dedicated blog page, where users can explore in-depth articles. Authors are also highlighted with a detailed author page, showcasing information about the author and linking to all of their published works.",
+            "The site is designed for easy navigation, with an intuitive layout for users to browse through blogs, explore author profiles, and discover new content.",
+            "On the backend, blogs and author data are managed through a separate dashboard where admins can publish, edit, and manage content effortlessly. The dashboard allows for seamless publishing and updating of blogs, ensuring that content is always up-to-date.",
+            "Meta Blog provides a comprehensive blogging experience, combining front-end content discovery with an efficient back-end management system."
+        ]
+    },
+    {
+        id: 6,
+        title: 'Link Sharing',
+        tags: ['Next.js', 'Tailwind', 'Typescript'],
+        languages: ['Next.js', 'Tailwind Css', 'Typescript'],
+        links: ['https://link-sharing-liart.vercel.app/home', 'https://github.com/Maruf51/link-sharing'],
+        images: [link1, link2, link3, link4, link5, link6, link7, link8, link9, link10, link11, link12],
+        description: [
+            "Link Sharing, a dynamic and customizable platform that allows users to showcase their social media profiles in one convenient place.",
+            "Users can create an account, log in, and easily customize their profile by linking their various social media accounts, making it simple for viewers to connect with them on their favorite platforms.",
+            "With the profile editor, users can modify and update their links, ensuring that their profile stays current and reflects their social presence accurately.",
+            "The 'Saved' section enables users to store other profiles they find interesting, allowing for easy access and reference in the future.",
+            "Preview Mode gives users a real-time look at how their profile will appear to visitors, ensuring a seamless experience before sharing it with others.",
+            "Once satisfied with their profile, users receive a unique link that they can share, directing others straight to their personalized profile page.",
+            "Link Sharing offers a smooth, intuitive way to present and share social media profiles, helping users connect with a broader audience and manage their online presence effectively.",
+        ]
+    },
+    {
+        id: 1,
+        title: 'Chat App',
+        tags: ['Next.js', 'Tailwind', 'Socket.io', 'Zustand'],
+        languages: ['Next.js', 'Tailwind Css', 'Socket.io', 'Zustand'],
+        links: ['https://chat-app-liart-eta.vercel.app/', 'https://github.com/Maruf51/chat-app'],
+        images: [chat1, chat2, chat3, chat4],
+        description: [
+            "Chat App, a modern and responsive messaging platform designed for seamless communication between users.",
+            "Users can easily create an account or log in to access their personalized chat dashboard. The main page displays their existing conversations, and they can start a new conversation by searching for other users via their email.",
+            "With features like adding, blocking, or deleting users, Chat App offers complete control over your interactions. Users can send and receive both text messages and images, making conversations more engaging.",
+            "Messages can also be deleted at any time, providing users with the flexibility to manage their chats effectively.",
+            "The platform shows the active status of other users, so you know when someone is online and ready to chat.",
+            "Responsive design ensures that Chat App provides a smooth experience on both desktop and mobile devices, allowing users to stay connected anytime, anywhere."
         ]
     },
     {
@@ -118,37 +174,19 @@ const projectData = [
         ]
     },
     {
-        id: 6,
-        title: 'Link Sharing',
+        id: 7,
+        title: 'True Message',
         tags: ['Next.js', 'Tailwind', 'Typescript'],
         languages: ['Next.js', 'Tailwind Css', 'Typescript'],
-        links: ['https://link-sharing-liart.vercel.app/home', 'https://github.com/Maruf51/link-sharing'],
-        images: [link1, link2, link3, link4, link5, link6, link7, link8, link9, link10, link11, link12],
+        links: ['https://true-message.vercel.app', 'https://github.com/Maruf51/true-message'],
+        images: [tm1, tm2, tm3, tm4, tm5, tm6, tm7, tm8, tm9],
         description: [
-            "Link Sharing, a dynamic and customizable platform that allows users to showcase their social media profiles in one convenient place.",
-            "Users can create an account, log in, and easily customize their profile by linking their various social media accounts, making it simple for viewers to connect with them on their favorite platforms.",
-            "With the profile editor, users can modify and update their links, ensuring that their profile stays current and reflects their social presence accurately.",
-            "The 'Saved' section enables users to store other profiles they find interesting, allowing for easy access and reference in the future.",
-            "Preview Mode gives users a real-time look at how their profile will appear to visitors, ensuring a seamless experience before sharing it with others.",
-            "Once satisfied with their profile, users receive a unique link that they can share, directing others straight to their personalized profile page.",
-            "Link Sharing offers a smooth, intuitive way to present and share social media profiles, helping users connect with a broader audience and manage their online presence effectively.",
+            "True Message is a unique platform that enables users to receive anonymous messages and images through a personalized link.",
+            "After registering and logging into their dashboard, each user is given a unique link with a personalized username. This link can be shared with others, allowing viewers to visit the user's page and send messages and images anonymously or with their name attached.",
+            "Messages and images sent to the user are delivered directly to their main dashboard, where they can easily view and manage them.",
+            "To maintain control over interactions, users can choose to turn off the 'accept chat' feature at any time, giving them the ability to pause or stop receiving messages if desired.",
+            "True Message offers a simple yet effective way to engage with others while ensuring privacy and control over who can contact you."
         ]
-    },
-    {
-        id: 7,
-        title: 'Meta Blog NEXT 7',
-        tags: ['Web design'],
-        languages: ['Next.js', 'Javascript', 'Tailwind Css', 'Socket.io', 'Socket.io'],
-        links: ['www.google.com', 'https://github.com/Maruf51/chat-app'],
-        images: [projectImage]
-    },
-    {
-        id: 8,
-        title: 'Meta Blog NEXT 8',
-        tags: ['Web development'],
-        languages: ['Next.js', 'Javascript', 'Tailwind Css', 'Socket.io', 'Socket.io'],
-        links: ['www.google.com', 'https://github.com/Maruf51/chat-app'],
-        images: [projectImage]
     },
 ];
 
