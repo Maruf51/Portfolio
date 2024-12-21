@@ -12,7 +12,12 @@ const transport = nodemailer.createTransport({
 
 
 export const sendEmail = async (dto) => {
-    const {sender, receipients, subject, message} = dto;
+    const { sender, receipients, subject, message } = dto;
+    console.log('MAIL_HOST:', process.env.MAIL_HOST);
+    console.log('MAIL_PORT:', process.env.MAIL_PORT)
+    console.log('MAIL_USER:', process.env.MAIL_USER);
+    console.log('MAIL_PASSWORD:', process.env.MAIL_PASSWORD);
+
 
     return await transport.sendMail({
         from: sender,
