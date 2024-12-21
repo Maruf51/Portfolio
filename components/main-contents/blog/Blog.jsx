@@ -5,7 +5,6 @@ const unsignedUploadPreset = 'chat_app';
 
 const Blog = ({ selected }) => {
   const [selectedImage, setSelectedImage] = useState(null);
-  console.log(selectedImage);
 
   const uploadImage = async (e) => {
     e.preventDefault();

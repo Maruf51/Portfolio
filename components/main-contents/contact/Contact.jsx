@@ -8,17 +8,42 @@ const Contact = ({ selected }) => {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [emptyField, setEmptyField] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [messageStatus, setMessageStatus] = useState('')
 
   const handleSendMessage = (e) => {
     e.preventDefault()
-    if (name, email, message) {
-      console.log(name, email, message)
+    const resetForm = () => {
       setName('')
       setEmail('')
       setMessage('')
       setEmptyField(false)
-    } else {
-      setEmptyField(true)
+    }
+
+    if (!sending) {
+      setSending(true)
+      setMessageStatus('')
+      if (name, email, message) {
+        fetch('/api/send-email', {
+          method: 'POST',
+          body: JSON.stringify({ name, email, message })
+        })
+          .then(res => res.json())
+          .then(result => {
+            if (result.accepted) setMessageStatus('Message successfully sent. I will contact you shortly.')
+            resetForm()
+            setSending(false)
+          })
+          .catch(error => {
+            console.log('error', error)
+            resetForm()
+            setSending(false)
+            setMessageStatus('Message could not be sent. Please try again.')
+          })
+      } else {
+        setSending(false)
+        setEmptyField(true)
+      }
     }
   }
 
@@ -61,10 +86,15 @@ const Contact = ({ selected }) => {
           <div className={twMerge('duration-300 w-0 h-[300%] absolute highlight-bg peer-focus:w-[110%] pointer-events-none rotate-12', message && 'w-[110%]')}></div>
         </div> */}
         <div className="col-span-2 w-full flex justify-end">
-          <button type="submit" className="w-full md:w-44 h-12 xl:h-10 relative secondary-border-design rounded-md cursor-pointer">
-            <span className="z-[1] highlight-text md:text-sm flex items-center gap-2"><IoPaperPlane className="text-lg" />Send Message</span>
+          <button type="submit" className={twMerge("w-full md:w-44 h-12 xl:h-10 relative secondary-border-design rounded-md cursor-pointer", sending && 'cursor-not-allowed opacity-80')}>
+            {
+              sending ? <span className="z-[1] highlight-text md:text-sm flex items-center gap-2">Sending...</span> : <span className="z-[1] highlight-text md:text-sm flex items-center gap-2"><IoPaperPlane className="text-lg" />Send Message</span>
+            }
           </button>
         </div>
+        {
+          messageStatus && <p className="highlight-text text-center col-span-2">{messageStatus}</p>
+        }
       </form>
     </div>
   )
