@@ -2,8 +2,8 @@ import nodemailer from 'nodemailer';
 
 const transport = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
-    port: process.env.MAIL_PORT,
-    secure: process.env.NODE_ENV !== 'development', // Adjust based on your environment
+    port: 465,
+    secure: true, // Adjust based on your environment
     auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASSWORD,
@@ -17,6 +17,7 @@ export const sendEmail = async (dto) => {
     console.log('MAIL_PORT:', process.env.MAIL_PORT)
     console.log('MAIL_USER:', process.env.MAIL_USER);
     console.log('MAIL_PASSWORD:', process.env.MAIL_PASSWORD);
+    console.log('SECURE:', process.env.NODE_ENV);
 
 
     return await transport.sendMail({
